@@ -1,0 +1,45 @@
+html, body{
+    height: 100%;
+}
+
+section {
+    display: flex;
+}
+
+nav, main, aside {
+    height: 400px;
+    background: cyan;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+main {
+    flex-grow: 3;
+}
+
+@media (max-width: 800px) {
+    section {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        flex: 100%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    nav, main, aside {
+        flex: 100%;
+        height: 200px;
+    }
+}
+
+/* Sreen Size 
+    1. < 576px -> X-Small
+    2. >= 576px -> Small (sm)
+    3. >= 768px -> Medium (md)
+    4. >= 992px -> Large (lg)
+    5. >= 1200px -> Extra Large (xl)
+    6. >= 1400px -> Extra Extra Large (xxl)
+*/
